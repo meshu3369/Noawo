@@ -1,0 +1,1087 @@
+    /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+    /*
+     * What follows is the result of much research on cross-browser styling.
+     * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+     * Kroc Camen, and the H5BP dev community and team.
+     */
+
+    /* ==========================================================================
+       Base styles: opinionated defaults
+       ========================================================================== */
+
+    html {
+        color: #222;
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    /*
+     * Remove text-shadow in selection highlight:
+     * https://twitter.com/miketaylr/status/12228805301
+     *
+     * These selection rule sets have to be separate.
+     * Customize the background color to match your design.
+     */
+
+    ::-moz-selection {
+        background: #b3d4fc;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: #b3d4fc;
+        text-shadow: none;
+    }
+
+    /*
+     * A better looking default horizontal rule
+     */
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    /*
+     * Remove the gap between audio, canvas, iframes,
+     * images, videos and the bottom of their containers:
+     * https://github.com/h5bp/html5-boilerplate/issues/440
+     */
+
+    audio,
+    canvas,
+    iframe,
+    img,
+    svg,
+    video {
+        vertical-align: middle;
+    }
+
+    /*
+     * Remove default fieldset styles.
+     */
+
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*
+     * Allow only vertical resizing of textareas.
+     */
+
+    textarea {
+        resize: vertical;
+    }
+
+    /* ==========================================================================
+       Browser Upgrade Prompt
+       ========================================================================== */
+
+    .browserupgrade {
+        margin: 0.2em 0;
+        background: #ccc;
+        color: #000;
+        padding: 0.2em 0;
+    }
+
+    /* ==========================================================================
+       Author's custom styles
+       ========================================================================== */
+
+    #myLoad {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .js #loader {
+        display: block;
+        position: absolute;
+        left: 100px;
+        top: 0;
+    }
+
+    .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+        background: url("../img/preloader1.gif") center no-repeat #fff;
+    }
+
+    #scrollUp {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background: #555;
+        height: 40px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0) url("../img/top.png") no-repeat scroll 0 0;
+    }
+
+    /* ==========================================================================
+       Helper classes
+       ========================================================================== */
+
+    /*
+     * Hide visually and from screen readers
+     */
+
+    .hidden {
+        display: none !important;
+    }
+
+    /*
+     * Hide only visually, but have it available for screen readers:
+     * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+     */
+
+    .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    /*
+     * Extends the .visuallyhidden class to allow the element
+     * to be focusable when navigated to via the keyboard:
+     * https://www.drupal.org/node/897638
+     */
+
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+
+    /*
+     * Hide visually and from screen readers, but maintain layout
+     */
+
+    .invisible {
+        visibility: hidden;
+    }
+
+    /*
+     * Clearfix: contain floats
+     *
+     * For modern browsers
+     * 1. The space content is one way to avoid an Opera bug when the
+     *    `contenteditable` attribute is included anywhere else in the document.
+     *    Otherwise it causes space to appear at the top and bottom of elements
+     *    that receive the `clearfix` class.
+     * 2. The use of `table` rather than `block` is only necessary if using
+     *    `:before` to contain the top-margins of child elements.
+     */
+
+    .clearfix:before,
+    .clearfix:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    /* ==========================================================================
+       EXAMPLE Media Queries for Responsive Design.
+       These examples override the primary ('mobile first') styles.
+       Modify as content requires.
+       ========================================================================== */
+
+    @media only screen and (min-width: 35em) {
+        /* Style adjustments for viewports that meet the condition */
+    }
+
+    @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+        /* Style adjustments for high resolution devices */
+    }
+
+    /* ==========================================================================
+       Print styles.
+       Inlined to avoid the additional HTTP request:
+       http://www.phpied.com/delay-loading-your-print-css/
+       ========================================================================== */
+
+    @media print {
+        *,
+        *:before,
+        *:after,
+        *:first-letter,
+        *:first-line {
+            background: transparent !important;
+            color: #000 !important;
+            /* Black prints faster:
+                                              http://www.sanbeiji.com/archives/953 */
+            box-shadow: none !important;
+            text-shadow: none !important;
+        }
+
+        a,
+        a:visited {
+            text-decoration: underline;
+        }
+
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
+
+        abbr[title]:after {
+            content: " (" attr(title) ")";
+        }
+
+        /*
+         * Don't show links that are fragment identifiers,
+         * or use the `javascript:` pseudo protocol
+         */
+        a[href^="#"]:after,
+        a[href^="javascript:"]:after {
+            content: "";
+        }
+
+        pre,
+        blockquote {
+            border: 1px solid #999;
+            page-break-inside: avoid;
+        }
+
+        /*
+         * Printing Tables:
+         * http://css-discuss.incutio.com/wiki/Printing_Tables
+         */
+        thead {
+            display: table-header-group;
+        }
+
+        tr,
+        img {
+            page-break-inside: avoid;
+        }
+
+        img {
+            max-width: 100% !important;
+        }
+
+        p,
+        h2,
+        h3 {
+            orphans: 3;
+            widows: 3;
+        }
+
+        h2,
+        h3 {
+            page-break-after: avoid;
+        }
+    }
+
+    /* ==========================================================================
+       Your CSS code goes here..*************************
+       ========================================================================== */
+    a{
+        transition: all .5s !important;
+
+    }
+
+
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background: #f5f5f5;
+    }
+
+    .top_header {
+        background: #7092be;
+    }
+
+    .top_header .row > div:nth-child(2) {
+        border-right: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+    }
+
+    .logo img {
+        margin-top: 10px;
+    }
+
+    .logo_title {
+        text-align: center;
+        color: #fff;
+    }
+
+    .logo_title h3 {
+        margin-top: 10px;
+    }
+
+    .logo_title p {
+        color: #f2f2f2;
+        margin-top: -5px;
+    }
+
+    .social {
+        text-align: center;
+    }
+
+    .social a:first-child {
+        padding-right: 15px;
+    }
+
+    .social a i {
+        color: #fff;
+        font-size: 15px;
+        transition: all .5s;
+    }
+    .social a:hover i {
+        color: #c12e2a;
+    }
+
+    .right_side {
+
+    }
+
+    .right_side_item {
+        margin-top: 10px;
+    }
+
+    .login_area {
+        margin-top: 10px;
+    }
+
+    .login_area a {
+        color: #fff;
+        text-decoration: none;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+    .login_area a:hover {
+        color: #c0c0c0 !important;
+    }
+
+    .login_area a:nth-child(1) {
+        float: left;
+    }
+
+    .login_area a:nth-child(2) {
+        float: right;
+    }
+
+    .index_img{
+        min-height: 100px;
+    }
+    /*
+      navbar stylesheet
+    */
+
+    nav.navbar.bootsnav ul.nav > li > a {
+        text-transform: uppercase;
+        color: #000;
+        transition: all .5s;
+    }
+
+    nav.navbar.bootsnav ul.nav > li > a:hover {
+        color: #c12e2a;
+    }
+
+
+
+    .footer {
+        background: #333;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-top: 50px;
+
+    }
+
+    .footer_row {
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .footer_item {
+        flex-grow: 1;
+    }
+
+    .socia_link a {
+        margin-right: 8px;
+
+    }
+
+    .socia_link a i {
+        font-weight: bold;
+        font-size: 18px;
+        color: #000;
+        padding: 10px;
+        background: #fff;
+    }
+
+    .footer_item {
+        text-align: left;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .footer_item h4 {
+        color: #fff;
+        font-family: 'Patua One', cursive;
+    }
+
+    .footer_item ul {
+        margin: 0 auto;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer_item ul li {
+        margin-top: 8px;
+    }
+
+    .footer_item ul li a {
+        color: #888;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+
+    .footer_item ul li a:hover {
+        color: #fff;
+    }
+
+    .search_form {
+        margin-top: 20px;
+    }
+
+    .search_form h4 {
+        font-family: 'Patua One', cursive;
+        font-weight: 400;
+    }
+
+    .search_form input {
+        padding: 10px 0px;
+        padding-left: 15px;
+    }
+
+    .bottom_footer {
+        border-top: 1px solid #888;
+        padding-top: 20px;
+        margin-top: 30px;
+    }
+
+    .footer_copyright {
+        padding: 0;
+    }
+
+    .footer_copyright p {
+        color: #888;
+        text-align: left;
+    }
+
+    .footer-menu {
+    }
+
+    .footer-menu ul {
+        margin: 0 auto;
+        padding: 0;
+        list-style-type: none;
+        float: right;
+    }
+
+    .footer-menu ul li {
+        margin-right: 5px;
+        float: left;
+    }
+
+    .footer-menu ul li a {
+        color: #888;
+        text-align: right;
+        text-decoration: none;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+
+    .footer-menu ul li a:hover {
+        color: #fff;
+    }
+
+    /*
+       all the content
+    */
+    .single_post_view {
+        margin-bottom: 30px;
+    }
+
+    .single_post_view h4{
+        font-family: 'Patua One', cursive;
+        text-transform: capitalize;
+    }
+    .single_post_view h4 a{
+        color: #000;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        text-decoration: none;
+    }
+    .single_post_view h4 a:hover{
+            color: #c12e2a;
+
+        }
+
+    .main_container {
+
+    }
+
+    .main_container .container {
+        background: #fff;
+        padding-bottom:30px;
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .main_container .title {
+        font-family: 'Patua One', cursive;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #666;
+        margin-left: 15px;
+    }
+
+     .more_post{
+        margin-top:20px !important;
+        width: 100px;
+        background: #00a0d2;
+        padding:5px 10px;
+        color: #fff;
+        text-transform: capitalize;
+        font-family:'Open Sans', sans-serif;
+        text-decoration: none;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+         text-decoration: none;
+    }
+    .more_post:hover{
+        background: #888;
+        color: #fff;
+        padding:5px 15px;
+        text-decoration: none;
+    }
+    .inspiration, .learn {
+        margin-top: 30px;
+    }
+
+    .bottom_banner{
+        border: 3px solid #e74536;
+        margin:0px 5px;
+        padding: 10px 0px;
+    }
+    .bottom_banner .heading{
+        color: #e74536;
+        padding-left:20px;
+    }
+    .bottom_banner .heading h3{
+        font-family:'Open Sans', sans-serif;
+        font-weight:600;
+    }
+
+    .bottom_banner .img_item img{
+        float: left;
+        margin-right:20px;
+        margin-top:5px;
+    }
+    .bottom_banner .my_btn{
+        margin-top:40px;
+    }
+    .bottom_banner .my_btn  a{
+        width: 100px;
+        background: #e74536;
+        padding:10px;
+        color: #fff;
+        text-transform: capitalize;
+        font-family:'Open Sans', sans-serif;
+        text-decoration: none;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+    .bottom_banner .my_btn  a:hover{
+        background: #fff;
+        color: #e74536;
+    }
+
+
+    /*
+     freebies page stylesheet
+
+    */
+
+    .freebies_left_side {
+
+    }
+    .freebies_right_side {
+        margin-top:20px;
+    }
+    .freebies_right_side img{
+        margin-bottom:15px;
+    }
+
+    .freebies_left_side .title{
+        margin-bottom:30px;
+        position: relative;
+    }
+    .freebies_left_side .title:before{
+        position: absolute;
+        content: '';
+        width: 83%;
+        height: 0;
+        border-top: 1px solid #888;
+        top: 10px;
+        right: 0;
+    }
+    .freebies_left_side .single_post{
+        margin-bottom:40px;
+        padding-left:0px;
+    }
+    .freebies_left_side .single_post .post_title{
+        margin-left:15px;
+        font-weight:800;
+        font-size:22px;
+        text-transform: capitalize;
+
+    }
+    .freebies_left_side .single_post .content_layer{}
+    .freebies_left_side .single_post .content_layer{
+        margin-top:20px;
+    }
+    .freebies_left_side .single_post .content_layer div:nth-child(2){}
+    .freebies_left_side .single_post .content_layer div:nth-child(2) h5{
+        margin-top: 0;
+        font-family:'Patua One', cursive;
+        font-weight:400;
+    }
+    .freebies_left_side .single_post .content_layer div:nth-child(2) p{
+        margin-top: 0;
+        margin-bottom:20px;
+    }
+    .freebies_left_side .single_post .content_layer div:nth-child(2) > a{
+
+        background: #699c01;
+        padding:5px 10px;
+        text-decoration: none;
+        color: #fff;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+
+    }
+    .freebies_left_side .single_post .content_layer div:nth-child(2) > a:hover{
+        background: #888;
+    }
+
+    .freebies_left_side .single_post .my_btn{
+        background: #1b95e0;
+        padding:2px 10px;
+        color: #fff;
+        font-family:'Open Sans', sans-serif;
+        font-weight:600;
+
+        text-decoration: none;
+        margin-top:10px;
+        margin-bottom:20px;
+    }
+
+
+
+
+    /*
+      tricks page
+    */
+
+    .tricks_left_side{
+
+    }
+    .tricks_left_side .single_post{
+        margin-bottom:40px;
+        padding-bottom: 40px;
+        padding-right:15px;
+        padding-left:15px;
+    }
+    .tricks_left_side .single_post p{
+        font-family: 'Lato', sans-serif;
+
+    }
+    .tricks_left_side .single_post .post_title{
+
+        font-weight:800;
+        font-size:30px;
+        text-transform: capitalize;
+    }
+    .tricks_left_side .single_post .tag_area{
+        display: -webkit-flex;
+        display: flex;
+        padding:10px 0px;
+
+    }
+    .tricks_left_side .single_post .tag_area .tag_item{
+        flex-grow: 1;
+    }
+    .tricks_left_side .single_post .tag_area .tag_item img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        float: left;
+        margin-right:10px;
+        margin-top:-3px;
+
+
+    }
+    .tricks_left_side .single_post .tag_area .tag_item p{
+
+    }
+    .tricks_left_side .single_post .tag_area .tag_item i{
+        color: #e74536;
+    }
+    .tricks_left_side .single_post .tag_area .tag_item a{
+        text-decoration: none;
+    }
+
+    .tricks_left_side .single_post .content_layer{
+        margin-top:20px;
+        margin-right:30px;
+    }
+
+    .tricks_left_side .single_post .content_layer h1,
+    .tricks_left_side .single_post .content_layer h2,
+    .tricks_left_side .single_post .content_layer h3
+    {
+        font-family:'Lato', sans-serif;
+        line-height: 2em;
+    }
+
+    .tricks_left_side .single_post .content_layer a{
+        color: #e74536;
+    }
+    .tricks_left_side .single_post .content_layer div,.tricks_left_side .single_post .content_layer p,.tricks_left_side .single_post .content_layer h4,
+    .tricks_left_side .single_post .content_layer h5{
+        line-height: 2.5em;
+        word-spacing:2px;
+        margin-right:15px;
+        font-size: 16px;
+        font-family:'Lato', sans-serif;
+    }
+    .tricks_left_side .single_post .content_layer .more_post,.latest_more_post{
+
+        margin-top:20px !important;
+        width: 100px;
+        background: #e74536;
+        padding:5px;
+        color: #fff;
+        text-transform: capitalize;
+        font-family:'Open Sans', sans-serif;
+        text-decoration: none;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+    .tricks_left_side .single_post .content_layer .more_post:hover{
+        background: #fff;
+        color: #e74536;
+    }
+    .latest_more_post a{
+        color: #fff;
+
+    }
+    .latest_more_post:hover{
+        color: #888;
+        width: 115px;
+    }
+
+.tricks_left_side .my_btn{
+    background: #1b95e0;
+    padding:10px 10px;
+    color: #fff;
+    font-family:'Open Sans', sans-serif;
+    font-weight:600;
+
+    text-decoration: none;
+    margin-top:10px;
+    margin-bottom:20px;
+    margin-left:15px;
+    float: left;
+    transition: all 0.5s;
+}
+    .tricks_left_side .my_btn:hover{
+        color: #fff !important;
+        background: #888;
+        padding-right:20px;
+    }
+
+    .tricks_right_side{
+        margin-top:20px;
+    }
+    .tricks_right_side .adv{
+        border:1px solid #ddd;
+        margin-bottom:20px;
+        padding:10px 15px;
+    }
+    .tricks_right_side .join_button{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tricks_right_side .adv h2{
+        font-family:'Patua One', cursive;
+    }
+    .tricks_right_side .join_button h2 a{
+        font-family:'Patua One', cursive;
+        color: #c12e2a;
+    }
+    .tricks_right_side .join_button .single_btn{
+        color: #fff;
+        background: #000;
+        width: 40%;
+        flex-grow: 1;
+        padding:10px 10px;
+        margin-right:10px;
+        margin-bottom:10px;
+    }
+    .tricks_right_side .join_button .single_btn i{}
+    .tricks_right_side .join_button .single_btn span{
+        color: #000;
+    }
+
+   .tricks_right_side .trend_post h2{
+        color: #c12e2a;
+        margin-bottom:20px;
+        margin-top:0px;
+    }
+
+    .tricks_right_side .trend_post ul{
+        margin:0 auto;
+        padding:0;
+    }
+    .tricks_right_side .trend_post ul li{
+        color: #c12e2a;
+        margin-bottom:10px;
+        margin-left:20px;
+    }
+    .tricks_right_side .trend_post ul li a{
+        color: #000;
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+
+    .cat-post-item{
+        list-style-type: square;
+        list-style: square;
+        border: 0;
+        text-transform: capitalize;
+    }
+    li.cat-post-item:before {
+        position: absolute;
+    }
+
+    /*
+     tutorial page
+    */
+
+
+    .search_result .title{
+        font-family:'Patua One', cursive;
+        margin-bottom:30px;
+        margin-left:0px;
+    }
+    .search_area {
+        margin-top:30px;
+    }
+    .search_result{}
+    .search_result ul{
+        margin:0 auto;
+        padding:0;
+        list-style-type: none;
+
+    }
+    .search_result ul li{
+        display: flex;
+        margin-bottom:15px;
+        font-family:'Patua One', cursive;
+    }
+    .search_result ul li span:first-child{
+         flex-basis:10%;
+         margin-right: 10px;
+        margin-top:3px;
+     }
+    .search_result ul li span:first-child .year_of{
+        font-family:'Patua One', cursive;
+        font-weight:bold;
+    }
+    .search_result ul li span:last-child{
+        flex-basis:90%;
+    }
+    .search_result ul li a{
+        color: #000;
+
+        font-size: 16px;
+    }
+    .search_result .pagination .my_btn {
+        float: left;
+        background: #1b95e0;
+        padding: 5px 10px;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left:0px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+
+    .btn{
+        border-radius: 0;
+    }
+    .also_read{
+        margin-top:30px;
+        font-family:'Patua One', cursive;
+
+        margin-bottom:50px;
+    }
+    .also_read h3{
+        font-family:'Patua One', cursive;
+        color: #3c3c3c;
+    }
+    .also_read .btn{
+        border-radius: 0;
+        padding:2px 15px;
+        margin-left:-5px;
+    }
+    .also_read img{
+
+    }
+
+    .year_of{
+        border-bottom:1px solid #ddd;
+        font-family:'Patua One', cursive;
+    }
+    /*
+     faq page
+    */
+
+
+    .faq_content{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .faq_content h4 a{
+        font-family:'Patua One', cursive;
+        color: #3c3c3c;
+    }
+    .faq_navigation .navbar-header a{  }
+    .faq_navigation .navbar-header img{
+
+    }
+    .faq_content ul li{
+        font-family:'Patua One', cursive;
+    }
+    .faq_content img{
+        width: 40%;
+        float: right;
+    }
+
+    .page_content{
+        padding:35px;
+
+    }
+    .page_content h1,.page_content h2, .page_content h3,.page_content h4,.page_content h5,.page_content h6{
+        font-family:'Patua One', cursive;
+        color:#1a1a1a;
+    }
+    .page_content p{
+        margin-top:10px;
+        font-weight:bold;
+    }
+
+    .pagination{
+        float: right;
+    }
+    .pagination p{
+        float: left;
+    }
+
+    .pagination .my_btn{
+        float: left;
+        background: #1b95e0;
+        padding:10px 10px;
+        color: #fff;
+        font-family:'Open Sans', sans-serif;
+        font-weight:600;
+
+        text-decoration: none;
+        margin-top:10px;
+        margin-bottom:20px;
+        margin-left:15px;
+        float: left;
+        transition: all 0.5s;
+    }
+
+    .current-menu-item a{
+        color: #555;
+        background-color: #e7e7e7;
+    }
+
+    .start_post {}
+    .start_post .block {
+        font-family:'Lato', sans-serif;
+    }
+    .start_post .title {
+        margin-left:0px;
+        font-family:'Patua One', cursive;
+    }
+    .start_post img{
+        float: right;
+        margin-left:20px;
+    }
+    #option-tree-sub-header, .option-tree-save-layout{
+        display:none;
+    }

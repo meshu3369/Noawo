@@ -1,0 +1,72 @@
+
+
+@media (max-width: 768px) {
+    .footer_row {
+        flex-flow: column;
+    }
+    .logo img {
+        margin:0 auto;
+        padding:0;
+    }
+    .logo_title h3 {
+        font-size:18px;
+    }
+    .logo_title p{
+        font-size: 12px;
+    }
+    .social{
+        margin-top:30px;
+    }
+    .login_area{
+
+        padding-bottom:40px;
+    }
+    .bottom_banner .img_item img{
+        margin-bottom:10px;
+    }
+    .bottom_banner .my_btn {
+        padding-bottom:20px;
+    }
+    .bottom_banner .heading h3{
+        font-size: 18px;
+    }
+    .freebies_left_side .title{
+        padding-bottom:10px;
+        border-bottom:1px solid #888;
+    }
+    .freebies_left_side .title:before{
+        display: none;
+    }
+    .tricks_left_side .single_post .tag_area{
+        flex-direction: column;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .freebies_left_side .title:before{
+        width: 75%;
+    }
+    .tricks_left_side .single_post .tag_area{
+        flex-direction: column;
+    }
+
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+
+    .freebies_left_side .title:before{
+        width: 75%;
+    }
+    .tutorial{
+        margin-left:35px;
+    }
+
+}
+@media (min-width: 1201px) {
+    nav.navbar.bootsnav ul.nav > li > a{
+        margin-right:30px;
+    }
+    .tutorial{
+        margin-left:35px;
+    }
+}
+
