@@ -3,6 +3,6 @@ WordPress blog
 
 visit here: http://meshudebnath.com/project/blog/
 
-**License**
-------------
-**All rights reserved**
+License
+---------------
+**&copy; 2015 Meshu Debnath, All rights reserved.**
